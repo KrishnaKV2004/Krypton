@@ -1,5 +1,7 @@
 .git/
 
+.vscode/
+
 temp/
 docs/
 build/*.exe
