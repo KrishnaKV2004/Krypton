@@ -15,6 +15,7 @@
         log_Info    - Logs an info message.
         log_Warning - Logs a warning message.
         log_Error   - Logs an error message.
+        log_Manual  - Displays the manual for the Krypton compiler.
 
 ---------------------------------------------------------------------------------------*/
 

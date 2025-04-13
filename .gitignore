@@ -4,7 +4,3 @@
 
 temp/
 docs/
-build/*.exe
-
-*.exe
-*.out
