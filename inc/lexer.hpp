@@ -1,6 +1,12 @@
 /*---------------------------------------------------------------------------------------
 
-                            Lexical Analyzer Header File
+                                Lexical Analyzer Header File
+
+
+        Libraries & Headers Included -->
+
+        iostream  - For input and output operations.
+        string    - For using the string class.
 
 ---------------------------------------------------------------------------------------*/
 
