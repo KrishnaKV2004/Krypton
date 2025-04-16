@@ -29,7 +29,6 @@ using namespace std;
 
 enum CommandType
 {
-    CMD_CLI,
     CMD_COMPILE,
     CMD_TOKENIZE,
     CMD_OUTPUT,
@@ -41,10 +40,12 @@ enum CommandType
 int main(int argc, char * argv[])
 {
     CommandType cmd;
+    
+    string version = "Krypton v1.0.0";
 
     if (argc < 2)
     {
-        cmd = CMD_CLI;
+        log_Info("Krypton CLI will be available soon !");
         return 0;
     }
 
@@ -58,6 +59,35 @@ int main(int argc, char * argv[])
     else if (parsed_command == "help") cmd = CMD_HELP;
     else if (parsed_command == "version") cmd = CMD_VERSION;
     else cmd = CMD_UNKNOWN;
+
+    switch (cmd)
+    {
+        case CMD_COMPILE:
+            log_Info("Compiling File : " + flag);
+            break;
+
+        case CMD_TOKENIZE:
+            log_Info("Tokenizing File : " + flag);
+            break;
+
+        case CMD_OUTPUT:
+            log_Info("Outputting File : " + flag);
+            break;
+
+        case CMD_HELP:
+            log_Info("Krypton Help : ");
+            log_Manual();
+            break;
+
+        case CMD_VERSION:
+            log_Info("Krypton Version : " + version);
+            break;
+    
+        default:
+            log_Error("Unknown Command : " + command);
+            log_Manual();
+            break;
+    }
 
     return 0;
 }
